@@ -19,6 +19,11 @@ Do the following:
 
    HINT: no function required
 */
+var votingAge = 18;
+
+if (votingAge >= 18){
+  console.log(true);
+}
 
 
 
@@ -32,7 +37,13 @@ Do the following:
 
    HINT: no function required
 */
+let a = 1;
+let b = 2;
 
+if (a,b){
+  a = a + b
+  console.log(a);
+}
 
 
 
@@ -47,6 +58,8 @@ Do the following:
 
    HINT: look up the Number method
 */
+let value = parseInt("1999");
+console.log(value);
 
 
 
@@ -60,8 +73,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a, b){
+  let sum = a * b
+  console.log(sum)
+  return sum;
 }
 
 
@@ -76,8 +91,9 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(humanYears){
+  humanYears = humanYears * 7;
+  return humanYears;
 }
 
 
@@ -109,8 +125,53 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
+let age;
+let weight;
+let foodAmount;
+function hungryDog(weight, age){
   /*add your code here*/
+  if( age >= 1){
+    // greater than 15 lbs
+    if(weight > 15){
+      foodAmount = weight * .02
+      console.log(foodAmount)
+      return foodAmount;
+    }
+    // between 11-15 lbs
+    else if(weight > 11 && weight <= 15){
+      foodAmount = weight * .03;
+      console.log(foodAmount)
+      return foodAmount;
+    }
+    //between 6-10 lbs
+    else if(weight > 6 && weight <= 10){
+      foodAmount = weight * .04;
+      console.log(foodAmount)
+      return foodAmount;
+    }
+    else if(weight <= 5){
+      foodAmount = weight * .05;
+      console.log(foodAmount)
+      return foodAmount;
+    }
+  }
+ else if(age < 1){
+    if(age > .16 && age <= .33 ){
+      foodAmount = weight * .1;
+      console.log(foodAmount)
+      return foodAmount;
+    }
+   else if(age > .33 && age <=.584 ){
+     foodAmount = weight * .05;
+     console.log(foodAmount)
+     return foodAmount;
+   }
+   else if(age >.584 && age < 1){
+     foodAmount = weight * .04;
+     console.log(foodAmount)
+     return foodAmount;
+   }
+  }
 }
 
 
