@@ -125,54 +125,34 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-let age;
-let weight;
-let foodAmount;
 function hungryDog(weight, age){
   /*add your code here*/
-  if( age >= 1){
+  if( age >= 1 && weight > 15){
     // greater than 15 lbs
-    if(weight > 15){
-      foodAmount = weight * .02
-      console.log(foodAmount)
-      return foodAmount;
+     return  weight * .02;
     }
     // between 11-15 lbs
-    else if(weight > 11 && weight <= 15){
-      foodAmount = weight * .03;
-      console.log(foodAmount)
-      return foodAmount;
+    else if(age >= 1 && weight > 11 && weight <= 15){
+      return weight * .03;
     }
     //between 6-10 lbs
-    else if(weight > 6 && weight <= 10){
-      foodAmount = weight * .04;
-      console.log(foodAmount)
-      return foodAmount;
+    else if(age >= 1 && weight > 6 && weight <= 10){
+      return weight * .04;
     }
-    else if(weight <= 5){
-      foodAmount = weight * .05;
-      console.log(foodAmount)
-      return foodAmount;
+    else if(age >= 1 &&weight <= 5){
+      return weight * .05;
     }
-  }
- else if(age < 1){
-    if(age > .16 && age <= .33 ){
-      foodAmount = weight * .1;
-      console.log(foodAmount)
-      return foodAmount;
+    else if(age > .16 && age <= .33 ){
+      return weight * .1;
     }
-   else if(age > .33 && age <=.584 ){
-     foodAmount = weight * .05;
-     console.log(foodAmount)
-     return foodAmount;
+    else if(age > .33 && age <= .583){
+     return weight * .05;
    }
-   else if(age >.584 && age < 1){
-     foodAmount = weight * .04;
-     console.log(foodAmount)
-     return foodAmount;
+   else if(age > .583 && age < 1){
+     return weight * .04; 
    }
   }
-}
+
 
 
 
@@ -196,9 +176,32 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+let computer = Math.random()
+if (computer < .34){
+  computer = "rock"
+}
+else if(computer <= .67){
+  computer = "scissors"
+} else {
+  computer = "paper"
+}
 
-function game(user, computer){
-  /*add your code here*/
+function game(user, computer){  
+    /*add your code here*/
+  if(user === computer){
+      return "it's a tie";
+    }
+  else if(user === "scissors" && computer === "paper"){
+      return "you win!"
+  }
+  else if(user === "rock" && computer === "scissors"){
+    return "you win!"
+  }
+  else if(user === "paper" && computer === "rock"){
+    return "you win!"
+  }else{
+    return "you lose!"
+  }
 }
 
 
@@ -210,7 +213,7 @@ function game(user, computer){
 /*
 Using the miles function below do the following:
 1. Receive a number of kilometers
-2. Convert the number of kiolmeters received to miles
+2. Convert the number of kilometers received to miles
 3. Return the number of miles
 */
 
