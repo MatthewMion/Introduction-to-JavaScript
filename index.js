@@ -139,18 +139,18 @@ function hungryDog(weight, age){
     else if(age >= 1 && weight > 6 && weight <= 10){
       return weight * .04;
     }
-    else if(age >= 1 &&weight <= 5){
+    else if(age >= 1 && weight <= 5){
       return weight * .05;
     }
-    else if(age > .16 && age <= .33 ){
-      return weight * .1;
-    }
-    else if(age > .33 && age <= .583){
-     return weight * .05;
-   }
-   else if(age > .583 && age < 1){
+   else if(age >= .583 && age < 1){
      return weight * .04; 
    }
+   else if(age > .33 && age <= .583){
+    return weight * .05;
+  }
+   else if(age <= .33 ){
+    return weight * .1;
+  }
   }
 
 
@@ -255,9 +255,12 @@ Using the annoyingSong function below do the following:
 function annoyingSong(number){
   /*add your code here*/
  while(number > 0){
-    number--;
-    return `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number - 1} bottles of soda on the wall`;
-   }
+    
+  const song = `${number} bottles of soda on the wall, ${number} bottles of soda, take one down pass it around ${number - 1} bottles of soda on the wall`;
+  number--;
+  return song;
+}
+
  }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
